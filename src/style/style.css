@@ -1,0 +1,11 @@
+body {
+  font-family: "Trebuchet MS";
+  padding: 2rem 5rem 0rem 5rem;
+}
+body .bannerDefault {
+  background-color: rgb(200, 200, 200);
+  padding: 5rem 5rem 5rem 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}/*# sourceMappingURL=style.css.map */

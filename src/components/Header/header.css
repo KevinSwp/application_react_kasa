@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header .Logo_Home img {
+  width: 100%;
+  min-width: 100px;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  padding-top: 1rem;
+}
+.navigation li {
+  padding-left: 3rem;
+}
+.navigation li a {
+  text-decoration: none;
+  color: red;
+}/*# sourceMappingURL=header.css.map */

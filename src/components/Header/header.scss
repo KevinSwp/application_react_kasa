@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .Logo_Home {
+
+        img {
+            width: 100%;
+            min-width: 100px;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    padding-top: 1rem;
+
+    li {
+        padding-left: 3rem;
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+    }
+}
