@@ -46,7 +46,7 @@ function Home() {
                     <Link to={`/flats/${flat.id}`} key={flat.id} className='flat'>
                         {/* Display the cover image and the title of each flat */}
                         <img src={flat.cover} alt={flat.title}/>
-                        <h2>{flat.title}</h2>
+                        <h1>{flat.title}</h1>
                     </Link>
                 ))}
             </div>

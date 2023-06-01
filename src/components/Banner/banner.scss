@@ -1,0 +1,19 @@
+// Add this css to your "file.scss"
+.bannerFlat {
+    .bannerDefault {
+        background-color: transparent;
+        padding: 0;
+        height: 200px;
+
+        .h1Default {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+}

@@ -71,9 +71,11 @@
 
     .flat {
         position: relative;
+        border-radius: 1rem;
         width: calc(100% / 3 - 30px);
         margin-bottom: 2rem;
         height: 25rem;
+
 
         img {
             width: 100%;
@@ -82,7 +84,7 @@
             border-radius: 1rem;
         }
 
-        h2 {
+        h1 {
             position: absolute;
             top: 21rem;
             left: 1rem;
@@ -93,9 +95,13 @@
             z-index: 1;
         }
 
-        h2::after {
+        h1::after {
             content: none;
         }
     }
 
+    .flat:hover {
+        box-shadow: rgba(0, 0, 0, 0.250) 0px 0px 20px 0px;
+        transition: 0.2s;
+    }
 }
