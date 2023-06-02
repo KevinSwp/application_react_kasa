@@ -6,11 +6,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // Import the Banner component
 import Banner from '../../components/Banner/Banner';
+import DropdownDescription from '../../components/Dropdown/DropdownDescription';
+import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
 // Import the style sheet
 import './flat.scss';
 
 /**
- * Define the Home functional component 
+ * Define the Flat functional component 
  */
 function Flat() {
     // Use the useState hook to declare a state variable 'flatData' and its corresponding setter 'setFlatData'
@@ -63,7 +65,12 @@ function Flat() {
                 }
             </div>
             <div className='details_2'>
-
+                <div className='description'>
+                    <DropdownDescription flatData={flatData}/>
+                </div>
+                <div className='equipments'>
+                    <DropdownEquipements flatData={flatData}/>
+                </div>
             </div>
         </div>
     );
