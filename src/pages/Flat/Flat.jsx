@@ -39,31 +39,34 @@ function Flat() {
 
     // Render the apartment details
     return (
-        <div className='bannerFlat'>
+        <div className='flatContent'>
             <Banner imgSrc={flatData.cover} alt={flatData.title}/>
             <div className='details_1'>
-                <div>
+                <div className='bloc_title_location'>
                     <h1>{flatData.title}</h1>
                     <p>{flatData.location}</p>
                 </div>
                 {
                     flatData.host &&
-                    <div className='host_rate'>
-                        <div>
-                            <p>{flatData.host.name}</p>
+                    <div>
+                        <div className='bloc_host'>
+                            <p className='hostName'>{flatData.host.name}</p>
                             <img src={flatData.host.picture} alt={flatData.host.name} />
                         </div>
-                        <span>X X X X X</span>
+                        
                     </div>
                 }
             </div>
+
             <div className='tags'>
                 {
                     flatData.tags && flatData.tags.map((tag, index) => (
-                        <p key={index}>{tag}</p>
+                        <p className='tag' key={index}>{tag}</p>
                     ))
                 }
+                <p className='rate'>X X X X X</p>
             </div>
+            
             <div className='details_2'>
                 <div className='description'>
                     <DropdownDescription flatData={flatData}/>

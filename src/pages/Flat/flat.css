@@ -1,15 +1,56 @@
-.bannerFlat .bannerDefault {
+.flatContent {
+  color: #FF6060;
+}
+.flatContent .bannerDefault {
   background-color: transparent;
   padding: 0;
   height: 400px;
 }
-.bannerFlat .bannerDefault .h1Default {
+.flatContent .bannerDefault .h1Default {
   display: none;
 }
-.bannerFlat .bannerDefault img {
+.flatContent .bannerDefault img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+}
+.flatContent .details_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.flatContent .details_1 .bloc_title_location h1 {
+  margin-top: 0;
+}
+.flatContent .details_1 .bloc_host {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1rem;
+}
+.flatContent .details_1 .bloc_host .hostName {
+  text-align: right;
+  font-size: 1.2rem;
+}
+.flatContent .details_1 .bloc_host img {
+  border-radius: 5rem;
+  width: 40%;
+}
+.flatContent .tags {
+  display: flex;
+}
+.flatContent .tags .tag {
+  background-color: #FF6060;
+  color: white;
+  border-radius: 0.8rem;
+  margin-right: 1rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+.flatContent .tags .rate {
+  margin-left: auto;
+}
+.flatContent .details_2 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rem;
 }/*# sourceMappingURL=flat.css.map */
