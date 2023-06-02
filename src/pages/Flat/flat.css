@@ -66,10 +66,22 @@
 .flatContent .details_2 .dropdownContent {
   background-color: #F6F6F6;
 }
+.flatContent .details_2 .dropdownContent .description.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.flatContent .details_2 .dropdownContent .equipments.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.flatContent .details_2 .dropdownContent .equipments.active ul {
+  list-style: none;
+  padding: 0;
+}
 .flatContent .details_2 .dropdownContent .button {
+  display: flex;
+  justify-content: space-between;
   background-color: #FF6060;
   border-radius: 0.5rem;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   cursor: pointer;
 }
 .flatContent .details_2 .dropdownContent .button button {
@@ -78,4 +90,8 @@
   color: white;
   font-size: 1rem;
   cursor: pointer;
+}
+.flatContent .details_2 .dropdownContent .button svg {
+  fill: white;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=flat.css.map */

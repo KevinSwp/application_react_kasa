@@ -81,11 +81,25 @@
         .dropdownContent {
             background-color: #F6F6F6;
 
+            .description.active {
+                padding: 0.5rem 2rem 0.5rem 1rem;
+            }
 
+            .equipments.active{
+                padding: 0.5rem 2rem 0.5rem 1rem;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                }
+            }
+            
             .button {
+                display: flex;
+                justify-content: space-between;
                 background-color: #FF6060;
                 border-radius: 0.5rem;
-                padding: 0.5rem 2rem 0.5rem 1rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
                 cursor: pointer;
 
                 button {
@@ -95,7 +109,13 @@
                     font-size: 1rem;
                     cursor: pointer;
                 }
+
+                svg {
+                    fill: white;
+                    font-size: 1.4rem;
+                }
             }
+
         }
     }
 }

@@ -3,6 +3,9 @@
  */
 // Import necessary hooks and functionality from 'react' and 'react-router-dom'
 import React, { useState } from "react";
+// Import components
+import ChevronUp from "../Chevrons/ChevronUp";
+import ChevronDown from "../Chevrons/ChevronDown";
 // Import the style sheet
 import "./dropdown.scss";
 
@@ -20,10 +23,10 @@ function DropdownEquipements ({ flatData }) {
                 <button>
                     {isDropdownEquipementsOpen ? 'Équipements' : 'Équipements'}
                 </button>
+                {isDropdownEquipementsOpen ? <ChevronUp /> : <ChevronDown />}
             </div>
-            {/* If 'isDropdownEquipementsOpen' is true, it will render a paragraph with the text from 'flatData.description'.
-            This is a shorthand conditional rendering in React. */}
-            <div className="equipments">
+            {/* If 'isDropdownEquipementsOpen' is true, it will render a paragraph with the text from 'flatData.description'. */}
+            <div className={`equipments ${isDropdownEquipementsOpen ? 'active' : ''}`}>
                 {
                     isDropdownEquipementsOpen && 
                     <ul>
