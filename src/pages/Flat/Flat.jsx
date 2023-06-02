@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import DropdownDescription from '../../components/Dropdown/DropdownDescription';
 import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
+import Star from '../../components/Stars/Star';
 // Import the style sheet
 import './flat.scss';
 
@@ -64,7 +65,13 @@ function Flat() {
                         <p className='tag' key={index}>{tag}</p>
                     ))
                 }
-                <p className='rate'>X X X X X</p>
+                <p className='rate'>
+                {
+                    [...Array(5)].map((star, index) => {
+                        return <Star key={index} filled={index < flatData.rating} />
+                    })
+                }
+                </p>
             </div>
             
             <div className='details_2'>

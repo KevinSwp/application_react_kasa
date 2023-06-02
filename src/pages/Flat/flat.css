@@ -23,6 +23,9 @@
 .flatContent .details_1 .bloc_title_location h1 {
   margin-top: 0;
 }
+.flatContent .details_1 .bloc_title_location p {
+  font-size: 1.3rem;
+}
 .flatContent .details_1 .bloc_host {
   display: flex;
   justify-content: space-between;
@@ -42,13 +45,18 @@
 .flatContent .tags .tag {
   background-color: #FF6060;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   border-radius: 0.8rem;
   margin-right: 1rem;
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
 .flatContent .tags .rate {
+  display: flex;
   margin-left: auto;
+}
+.flatContent .tags .rate .star {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
 }
 .flatContent .details_2 {
   display: flex;
@@ -81,14 +89,14 @@
   justify-content: space-between;
   background-color: #FF6060;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
   cursor: pointer;
 }
 .flatContent .details_2 .dropdownContent .button button {
   border: none;
   background-color: transparent;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .flatContent .details_2 .dropdownContent .button svg {

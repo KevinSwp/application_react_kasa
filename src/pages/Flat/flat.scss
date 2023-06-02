@@ -26,6 +26,10 @@
             h1 {
                 margin-top: 0;
             }
+
+            p {
+                font-size: 1.3rem;
+            }
         }
         
         .bloc_host {
@@ -52,14 +56,20 @@
         .tag {
             background-color: #FF6060;
             color: white;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             border-radius: 0.8rem;
             margin-right: 1rem;
             padding: 0.5rem 2rem 0.5rem 2rem;
         }
 
         .rate {
+            display: flex;
             margin-left: auto;
+
+            .star {
+                margin-left: 0.5rem;
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -99,14 +109,14 @@
                 justify-content: space-between;
                 background-color: #FF6060;
                 border-radius: 0.5rem;
-                padding: 0.5rem 1rem 0.5rem 1rem;
+                padding: 0.8rem 1rem 0.8rem 1rem;
                 cursor: pointer;
 
                 button {
                     border: none;
                     background-color: transparent;
                     color: white;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     cursor: pointer;
                 }
 
