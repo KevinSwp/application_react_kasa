@@ -68,10 +68,10 @@ function Flat() {
             </div>
             
             <div className='details_2'>
-                <div className='description'>
+                <div className='btnDescription'>
                     <DropdownDescription flatData={flatData}/>
                 </div>
-                <div className='equipments'>
+                <div className='btnEquipments'>
                     <DropdownEquipements flatData={flatData}/>
                 </div>
             </div>

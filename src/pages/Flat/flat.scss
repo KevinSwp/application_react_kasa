@@ -52,6 +52,7 @@
         .tag {
             background-color: #FF6060;
             color: white;
+            font-size: 0.8rem;
             border-radius: 0.8rem;
             margin-right: 1rem;
             padding: 0.5rem 2rem 0.5rem 2rem;
@@ -66,6 +67,36 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 5rem;
+        padding-top: 1rem;
+
+        .btnDescription {
+            width: 100%;
+            margin-right: 5rem;
+        }
+
+        .btnEquipments{
+            width: 100%;
+        }
+
+        .dropdownContent {
+            background-color: #F6F6F6;
+
+
+            .button {
+                background-color: #FF6060;
+                border-radius: 0.5rem;
+                padding: 0.5rem 2rem 0.5rem 1rem;
+                cursor: pointer;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 

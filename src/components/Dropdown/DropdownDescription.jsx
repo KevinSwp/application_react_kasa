@@ -16,13 +16,16 @@ function DropdownDescription ({ flatData }) {
     return (
         <div className="dropdownContent">
             {/* The button has an onClick event handler which toggles the 'isDropdownDescriptionOpen' state. */}
-            {/* If 'isDropdownDescriptionOpen' is true, button displays 'Masquer la description'. If false, it displays 'Afficher la description'. */}
-            <button onClick={() => setisDropdownDescriptionOpen(!isDropdownDescriptionOpen)}>
-                {isDropdownDescriptionOpen ? 'Masquer la description' : 'Afficher la description'}
-            </button>
+            <div className="button" onClick={() => setisDropdownDescriptionOpen(!isDropdownDescriptionOpen)}>
+                <button>
+                    {isDropdownDescriptionOpen ? 'Description' : 'Description'}
+                </button>
+            </div>
             {/* If 'isDropdownDescriptionOpen' is true, it will render a paragraph with the text from 'flatData.description'.
             This is a shorthand conditional rendering in React. */}
-            {isDropdownDescriptionOpen && <p>{flatData.description}</p>}
+            <div className="description">
+                {isDropdownDescriptionOpen && <p>{flatData.description}</p>}
+            </div>
         </div>
     )
 }

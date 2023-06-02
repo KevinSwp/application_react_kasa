@@ -14,20 +14,23 @@ function DropdownEquipements ({ flatData }) {
 
     // The component returns JSX
     return (
-        <div className="EquipementsContent">
+        <div className="dropdownContent">
             {/* The button has an onClick event handler which toggles the 'isDropdownEquipementsOpen' state. */}
-            {/* If 'isDropdownEquipementsOpen' is true, button displays 'Masquer la description'. If false, it displays 'Afficher la description'. */}
-            <button onClick={() => setisDropdownEquipementsOpen(!isDropdownEquipementsOpen)}>
-                {isDropdownEquipementsOpen ? 'Masquer les équipements' : 'Afficher les équipements'}
-            </button>
+            <div className="button" onClick={() => setisDropdownEquipementsOpen(!isDropdownEquipementsOpen)}>
+                <button>
+                    {isDropdownEquipementsOpen ? 'Équipements' : 'Équipements'}
+                </button>
+            </div>
             {/* If 'isDropdownEquipementsOpen' is true, it will render a paragraph with the text from 'flatData.description'.
             This is a shorthand conditional rendering in React. */}
-            {
-                isDropdownEquipementsOpen && 
-                <ul>
-                    {flatData.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}
-                </ul>
-            }
+            <div className="equipments">
+                {
+                    isDropdownEquipementsOpen && 
+                    <ul>
+                        {flatData.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}
+                    </ul>
+                }
+            </div>
         </div>
     )
 }
