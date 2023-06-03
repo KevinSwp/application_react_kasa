@@ -7,7 +7,7 @@
   width: 50%;
   margin: auto;
   padding-bottom: 5rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 .error404 :nth-child(2) {
   width: 70%;
@@ -16,4 +16,6 @@
 }
 .error404 :nth-child(3) {
   color: #FF6060;
+  font-size: 1.2rem;
+  padding-bottom: 5rem;
 }/*# sourceMappingURL=error404.css.map */

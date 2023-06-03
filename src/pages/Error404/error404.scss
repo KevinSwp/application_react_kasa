@@ -7,7 +7,7 @@
         width: 50%;
         margin: auto;
         padding-bottom: 5rem;
-        padding-top: 5rem;
+        padding-top: 10rem;
     }
 
     :nth-child(2) {
@@ -18,5 +18,7 @@
 
     :nth-child(3) {
         color: #FF6060;
+        font-size: 1.2rem;
+        padding-bottom: 5rem;
     }
 }

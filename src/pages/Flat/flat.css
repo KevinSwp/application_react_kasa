@@ -1,20 +1,44 @@
 .flatContent {
   color: #FF6060;
 }
-.flatContent .bannerDefault {
+.flatContent .carousel {
+  position: relative;
   background-color: transparent;
   padding: 0;
   height: 400px;
+  margin-bottom: 3rem;
 }
-.flatContent .bannerDefault .h1Default {
-  display: none;
+.flatContent .carousel .previous {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  fill: white;
+  font-size: 7rem;
+  top: 8.5rem;
+  left: 2rem;
 }
-.flatContent .bannerDefault img {
+.flatContent .carousel .next {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  fill: white;
+  font-size: 7rem;
+  top: 8.5rem;
+  right: 2rem;
+}
+.flatContent .carousel .carousel_img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+}
+.flatContent .carousel .current_img {
+  position: absolute;
+  color: white;
+  top: 22rem;
+  left: 50%;
+  font-size: 1.2rem;
 }
 .flatContent .details_1 {
   display: flex;

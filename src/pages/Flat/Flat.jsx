@@ -5,7 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // Import the Banner component
-import Banner from '../../components/Banner/Banner';
+import Carousel from '../../components/Carousel/Carousel';
 import DropdownDescription from '../../components/Dropdown/DropdownDescription';
 import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
 import Star from '../../components/Stars/Star';
@@ -41,7 +41,7 @@ function Flat() {
     // Render the apartment details
     return (
         <div className='flatContent'>
-            <Banner imgSrc={flatData.cover} alt={flatData.title}/>
+            <Carousel images={flatData.pictures} />
             <div className='details_1'>
                 <div className='bloc_title_location'>
                     <h1>{flatData.title}</h1>
@@ -60,18 +60,25 @@ function Flat() {
             </div>
 
             <div className='tags'>
+                {/* Checks if flatData has 'tags' property and then maps over each tag */}
                 {
                     flatData.tags && flatData.tags.map((tag, index) => (
+                        // For each tag, a paragraph with a 'tag' class is created, using the index as a key
                         <p className='tag' key={index}>{tag}</p>
                     ))
                 }
-                <p className='rate'>
-                {
-                    [...Array(5)].map((star, index) => {
-                        return <Star key={index} filled={index < flatData.rating} />
-                    })
-                }
-                </p>
+                {/* A paragraph with a 'rate' class, that will contain the Star components */}
+                <span className='rate'>
+                    {/* Create an array with 5 elements and map over each. The array is created with spread operator and Array(5) */}
+                    {
+                        [...Array(5)].map((star, index) => {
+                        /* For each element of the array, a Star component is rendered. 
+                        The Star component gets a 'filled' prop that depends on if the current index 
+                        is less than the rating from flatData. This will render 'rating' number of filled stars. */
+                            return <Star key={index} filled={index < flatData.rating} />
+                        })
+                    }
+                </span>
             </div>
             
             <div className='details_2'>

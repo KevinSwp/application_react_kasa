@@ -14,6 +14,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/flat" element={<Flat />} />
         <Route path="/flats/:id" element={<Flat />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

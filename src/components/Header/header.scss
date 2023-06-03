@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
 
     .Logo_Home {
 
@@ -18,11 +19,15 @@
 
     li {
         padding-left: 3rem;
+    }
 
-        a {
-            text-decoration: none;
-            color: #FF6060;
-            font-size: x-large;
-        }
+    .default_link {
+        text-decoration: none;
+        color: #FF6060;
+        font-size: x-large;
+    }
+
+    .active_link {
+        text-decoration: underline;
     }
 }

@@ -1,15 +1,15 @@
-.bannerSomething .bannerDefault {
+.bannerAbout .bannerDefault {
   background-color: transparent;
   padding: 0;
   height: 200px;
 }
-.bannerSomething .bannerDefault .h1Default {
+.bannerAbout .bannerDefault .h1Default {
   display: none;
 }
-.bannerSomething .bannerDefault img {
+.bannerAbout .bannerDefault img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
-}/*# sourceMappingURL=banner.css.map */
+}/*# sourceMappingURL=about.css.map */
