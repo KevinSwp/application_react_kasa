@@ -3,7 +3,7 @@
  */
 // Import necessary hooks and functionality from 'react' and 'react-router-dom'
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 // Import the Banner component
 import Carousel from '../../components/Carousel/Carousel';
 import DropdownDescription from '../../components/Dropdown/DropdownDescription';
@@ -16,27 +16,47 @@ import './flat.scss';
  * Define the Flat functional component 
  */
 function Flat() {
-    // Use the useState hook to declare a state variable 'flatData' and its corresponding setter 'setFlatData'
-    const [flatData, setFlatData] = useState([]);
+    // State hook for storing fetched data
+    const [flatData, setFlatData] = useState(null);
 
-    // Use the useParams hook to access the route parameter 'id'
-    const { id } = useParams(); 
+    // Hook to get 'id' from the URL parameters
+    const { id } = useParams();
 
-    // Use the useEffect hook to fetch data when the component mounts or 'id' changes
+    // Hook for navigation, can be used to programmatically navigate
+    const navigate = useNavigate();
+
+    // Effect hook runs when 'id' or 'navigate' changes.
     useEffect(() => {
-        // Fetch data from 'apartment.json' file located at '/data' path
+
+        // Fetch data from local JSON file
         fetch('/data/apartment.json')
-            // Convert the response to JSON format
             .then(response => response.json())
             .then(data => {
-                // Find the apartment that corresponds to the 'id' from the URL
+
+                // Search for a specific flat in data using the id from the URL parameters
                 const foundFlat = data.find(item => item.id === id);
-                // Update the 'flatData' state with the found apartment
-                setFlatData(foundFlat);
+
+                // If no flat was found, navigate to 404 page
+                if (!foundFlat) {
+                    navigate('/404');
+                } else {
+                    // Else update the state with the found flat's data
+                    setFlatData(foundFlat);
+                }
             })
-            // Log any error that occurs during the fetch operation
-            .catch(error => console.error(error))
-    }, [id]); // Dependency array includes 'id' so this effect will rerun whenever 'id' changes
+            // If an error occurs during fetching, log the error and navigate to 404 page
+            .catch(error => {
+                console.error(error);
+                navigate('/404');
+            })
+
+    // Dependency array for the effect hook. If 'id' or 'navigate' changes, the effect is re-run.
+    }, [id, navigate]);
+
+    // If 'flatData' is still null (i.e., data has not been fetched yet), don't render anything
+    if (!flatData) {
+        return null;
+    }
 
     // Render the apartment details
     return (

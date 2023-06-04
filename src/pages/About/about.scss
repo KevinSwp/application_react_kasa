@@ -16,3 +16,78 @@
         }
     }
 }
+
+.dropdowns {
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+    color: #FF6060;
+    font-size: 1.5rem;
+
+    .btnReliability {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .btnRespect{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .btnService{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .btnSecurity{
+        width: 80%;
+        margin: auto;
+    }
+
+    .dropdownContent {
+        background-color: #F6F6F6;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+
+        .reliability.active {
+            padding: 0.5rem 2rem 0.5rem 1rem;
+        }
+
+        .respect.active{
+            padding: 0.5rem 2rem 0.5rem 1rem;
+        }
+
+        .service.active{
+            padding: 0.5rem 2rem 0.5rem 1rem;
+        }
+
+        .security.active{
+            padding: 0.5rem 2rem 0.5rem 1rem;
+        }
+        
+        .button {
+            display: flex;
+            justify-content: space-between;
+            background-color: #FF6060;
+            border-radius: 0.5rem;
+            padding: 0.8rem 1rem 0.8rem 1rem;
+            cursor: pointer;
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            svg {
+                fill: white;
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+}

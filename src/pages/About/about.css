@@ -12,4 +12,66 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+}
+
+.dropdowns {
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+  color: #FF6060;
+  font-size: 1.5rem;
+}
+.dropdowns .btnReliability {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.dropdowns .btnRespect {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.dropdowns .btnService {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.dropdowns .btnSecurity {
+  width: 80%;
+  margin: auto;
+}
+.dropdowns .dropdownContent {
+  background-color: #F6F6F6;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.dropdowns .dropdownContent .reliability.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.dropdowns .dropdownContent .respect.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.dropdowns .dropdownContent .service.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.dropdowns .dropdownContent .security.active {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.dropdowns .dropdownContent .button {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FF6060;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  cursor: pointer;
+}
+.dropdowns .dropdownContent .button button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.dropdowns .dropdownContent .button svg {
+  fill: white;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=about.css.map */

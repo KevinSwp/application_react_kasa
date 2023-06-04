@@ -6,8 +6,6 @@ import React, { useState } from "react";
 // Import components
 import ChevronUp from "../Chevrons/ChevronUp";
 import ChevronDown from "../Chevrons/ChevronDown";
-// Import the style sheet
-import "./dropdown.scss";
 
 // A functional component 'DropdownDescription' is being declared, which receives a prop 'flatData'.
 function DropdownDescription ({ flatData }) {

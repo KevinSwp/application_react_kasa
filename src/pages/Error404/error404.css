@@ -1,20 +1,20 @@
-.error404 {
+.error {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.error404 :nth-child(1) {
+.error .error404 {
   width: 50%;
   margin: auto;
   padding-bottom: 5rem;
   padding-top: 10rem;
 }
-.error404 :nth-child(2) {
-  width: 70%;
-  margin: auto;
+.error .messageError {
+  font-size: 3rem;
   padding-bottom: 10rem;
+  color: #FF6060;
 }
-.error404 :nth-child(3) {
+.error .backHome {
   color: #FF6060;
   font-size: 1.2rem;
   padding-bottom: 5rem;

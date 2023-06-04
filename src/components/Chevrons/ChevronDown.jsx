@@ -1,5 +1,3 @@
-import "./chevrons.scss";
-
 function ChevronDown() {
     return (
         <div>

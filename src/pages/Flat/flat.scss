@@ -116,6 +116,8 @@
 
         .dropdownContent {
             background-color: #F6F6F6;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
 
             .description.active {
                 padding: 0.5rem 2rem 0.5rem 1rem;

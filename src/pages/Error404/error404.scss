@@ -1,22 +1,22 @@
-.error404 {
+.error {
     display: flex;
     flex-direction: column;
     text-align: center;
 
-    :nth-child(1) {
+    .error404 {
         width: 50%;
         margin: auto;
         padding-bottom: 5rem;
         padding-top: 10rem;
     }
 
-    :nth-child(2) {
-        width: 70%;
-        margin: auto;
+    .messageError {
+        font-size: 3rem;
         padding-bottom: 10rem;
+        color: #FF6060;
     }
 
-    :nth-child(3) {
+    .backHome {
         color: #FF6060;
         font-size: 1.2rem;
         padding-bottom: 5rem;
