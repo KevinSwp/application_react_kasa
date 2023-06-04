@@ -109,6 +109,16 @@
   }
 }
 @media screen and (max-width: 800px) {
+  .bannerDefault {
+    margin-bottom: 2rem !important;
+  }
+  .apartmentList {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+  .apartmentList .flat {
+    margin-bottom: 2rem !important;
+  }
   .bannerHome .textBannerHome {
     top: 70px;
     font-size: 1.5rem;

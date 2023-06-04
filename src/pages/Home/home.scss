@@ -49,7 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color:  #F7F7F7;;
+    background-color:  #F7F7F7;
     padding: 3rem 2rem 1rem 2rem;
     border-radius: 1rem;
 
@@ -128,6 +128,19 @@
 }
 
 @media screen and (max-width: 800px) {
+    .bannerDefault {
+        margin-bottom: 2rem !important;
+    }
+
+    .apartmentList {
+        background-color:  transparent !important;
+        padding: 0 !important;
+
+        .flat {
+            margin-bottom: 2rem !important;
+        }
+    }
+
     .bannerHome {
         .textBannerHome {
             top: 70px;
