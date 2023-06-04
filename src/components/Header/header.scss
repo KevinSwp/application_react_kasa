@@ -32,3 +32,11 @@
         text-decoration: underline;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .navigation {
+        .default_link {
+            font-size: large;
+        }
+    }
+}

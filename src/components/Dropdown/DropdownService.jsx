@@ -28,7 +28,9 @@ function DropdownService ({ flatData }) {
                 {
                     isDropdownServiceOpen &&
                     <p>
-                        Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.
+                        Nos équipes se tiennent à votre disposition pour vous 
+                        fournir une expérience parfaite.
+                        N'hésitez pas à nous contacter si vous avez la moindre question.
                     </p>
                 }
             </div>

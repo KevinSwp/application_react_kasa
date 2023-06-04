@@ -24,4 +24,10 @@
 }
 .navigation .active_link {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  .navigation .default_link {
+    font-size: large;
+  }
 }/*# sourceMappingURL=header.css.map */

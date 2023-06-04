@@ -18,4 +18,15 @@
   color: #FF6060;
   font-size: 1.2rem;
   padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .messageError {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .messageError {
+    font-size: 1.5rem !important;
+  }
 }/*# sourceMappingURL=error404.css.map */

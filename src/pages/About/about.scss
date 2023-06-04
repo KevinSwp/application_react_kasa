@@ -18,31 +18,23 @@
 }
 
 .dropdowns {
-    padding-bottom: 5rem;
-    padding-top: 1rem;
+    padding: 0rem 7rem 5rem 7rem;
     color: #FF6060;
     font-size: 1.5rem;
 
     .btnReliability {
-        width: 80%;
-        margin: auto;
         margin-bottom: 2rem;
     }
 
     .btnRespect{
-        width: 80%;
-        margin: auto;
         margin-bottom: 2rem;
     }
 
     .btnService{
-        width: 80%;
-        margin: auto;
         margin-bottom: 2rem;
     }
 
     .btnSecurity{
-        width: 80%;
         margin: auto;
     }
 
@@ -89,5 +81,20 @@
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .dropdowns {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 1rem;
+
+        .button {
+
+            button {
+                font-size: 1rem !important;
+            }
+        }
     }
 }

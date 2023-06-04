@@ -50,8 +50,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     background-color:  #F7F7F7;;
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 5rem;
+    padding: 3rem 2rem 1rem 2rem;
     border-radius: 1rem;
 
     ::after {
@@ -73,7 +72,7 @@
         position: relative;
         border-radius: 1rem;
         width: calc(100% / 3 - 30px);
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         height: 25rem;
 
 
@@ -103,5 +102,40 @@
     .flat:hover {
         box-shadow: rgba(0, 0, 0, 0.250) 0px 0px 20px 0px;
         transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .flat {
+        height: 22rem !important;
+
+        h1 {
+            top: 17rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .flat {
+        width: calc(75% / 2 - -50px) !important;
+        height: 20rem !important;
+
+        h1 {
+            top: 16rem !important;
+            font-size: 1rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bannerHome {
+        .textBannerHome {
+            top: 70px;
+            font-size: 1.5rem;
+        }
+    }
+    
+    .flat {
+        width: calc(50% / 2 - -500px) !important;
     }
 }

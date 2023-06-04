@@ -15,28 +15,20 @@
 }
 
 .dropdowns {
-  padding-bottom: 5rem;
-  padding-top: 1rem;
+  padding: 0rem 7rem 5rem 7rem;
   color: #FF6060;
   font-size: 1.5rem;
 }
 .dropdowns .btnReliability {
-  width: 80%;
-  margin: auto;
   margin-bottom: 2rem;
 }
 .dropdowns .btnRespect {
-  width: 80%;
-  margin: auto;
   margin-bottom: 2rem;
 }
 .dropdowns .btnService {
-  width: 80%;
-  margin: auto;
   margin-bottom: 2rem;
 }
 .dropdowns .btnSecurity {
-  width: 80%;
   margin: auto;
 }
 .dropdowns .dropdownContent {
@@ -74,4 +66,15 @@
 .dropdowns .dropdownContent .button svg {
   fill: white;
   font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .dropdowns {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-size: 1rem;
+  }
+  .dropdowns .button button {
+    font-size: 1rem !important;
+  }
 }/*# sourceMappingURL=about.css.map */

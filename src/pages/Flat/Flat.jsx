@@ -60,53 +60,56 @@ function Flat() {
 
     // Render the apartment details
     return (
-        <div className='flatContent'>
-            <Carousel images={flatData.pictures} />
-            <div className='details_1'>
-                <div className='bloc_title_location'>
-                    <h1>{flatData.title}</h1>
-                    <p>{flatData.location}</p>
-                </div>
-                {
-                    flatData.host &&
-                    <div>
-                        <div className='bloc_host'>
-                            <p className='hostName'>{flatData.host.name}</p>
-                            <img src={flatData.host.picture} alt={flatData.host.name} />
+        <div>
+            <div className='flatContent'>
+                <Carousel images={flatData.pictures} />
+                <div className='details_1'>
+                    <div className='bloc1'>
+                        <div className='bloc_title_location'>
+                            <h1>{flatData.title}</h1>
+                            <p>{flatData.location}</p>
                         </div>
-                        
+                        <div className='tags'>
+                            {/* Checks if flatData has 'tags' property and then maps over each tag */}
+                            {
+                                flatData.tags && flatData.tags.map((tag, index) => (
+                                    // For each tag, a paragraph with a 'tag' class is created, using the index as a key
+                                    <p className='tag' key={index}>{tag}</p>
+                                ))
+                            }
+                        </div>
                     </div>
-                }
-            </div>
 
-            <div className='tags'>
-                {/* Checks if flatData has 'tags' property and then maps over each tag */}
-                {
-                    flatData.tags && flatData.tags.map((tag, index) => (
-                        // For each tag, a paragraph with a 'tag' class is created, using the index as a key
-                        <p className='tag' key={index}>{tag}</p>
-                    ))
-                }
-                {/* A paragraph with a 'rate' class, that will contain the Star components */}
-                <span className='rate'>
-                    {/* Create an array with 5 elements and map over each. The array is created with spread operator and Array(5) */}
-                    {
-                        [...Array(5)].map((star, index) => {
-                        /* For each element of the array, a Star component is rendered. 
-                        The Star component gets a 'filled' prop that depends on if the current index 
-                        is less than the rating from flatData. This will render 'rating' number of filled stars. */
-                            return <Star key={index} filled={index < flatData.rating} />
-                        })
-                    }
-                </span>
-            </div>
-            
-            <div className='details_2'>
-                <div className='btnDescription'>
-                    <DropdownDescription flatData={flatData}/>
+                    <div className='bloc2'>
+                        {
+                            flatData.host &&
+                            <div className='bloc_host'>
+                                <p className='hostName'>{flatData.host.name}</p>
+                                <img src={flatData.host.picture} alt={flatData.host.name} />
+                            </div>
+                        }
+                        {/* A paragraph with a 'rate' class, that will contain the Star components */}
+                        <span className='rate'>
+                            {/* Create an array with 5 elements and map over each. The array is created with spread operator and Array(5) */}
+                            {
+                                [...Array(5)].map((star, index) => {
+                                /* For each element of the array, a Star component is rendered. 
+                                The Star component gets a 'filled' prop that depends on if the current index 
+                                is less than the rating from flatData. This will render 'rating' number of filled stars. */
+                                    return <Star key={index} filled={index < flatData.rating} />
+                                })
+                            }
+                        </span>
+                    </div>
                 </div>
-                <div className='btnEquipments'>
-                    <DropdownEquipements flatData={flatData}/>
+                
+                <div className='details_2'>
+                    <div className='btnDescription'>
+                        <DropdownDescription flatData={flatData}/>
+                    </div>
+                    <div className='btnEquipments'>
+                        <DropdownEquipements flatData={flatData}/>
+                    </div>
                 </div>
             </div>
         </div>
