@@ -59,6 +59,7 @@
 }
 .flatContent .details_1 .bloc1 .bloc_title_location h1 {
   margin-top: 0;
+  padding-right: 2rem;
 }
 .flatContent .details_1 .bloc1 .bloc_title_location p {
   font-size: 1.3rem;
@@ -69,13 +70,18 @@
   justify-content: space-between;
   margin-top: -1rem;
 }
-.flatContent .details_1 .bloc2 .bloc_host .hostName {
+.flatContent .details_1 .bloc2 .bloc_host .blocName {
+  padding-top: 1rem;
+}
+.flatContent .details_1 .bloc2 .bloc_host .blocName .hostName {
   text-align: right;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 .flatContent .details_1 .bloc2 .bloc_host img {
   border-radius: 5rem;
-  width: 40%;
+  width: 60%;
 }
 .flatContent .details_1 .bloc2 .rate {
   display: flex;
@@ -153,15 +159,26 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: -1rem !important;
+    margin-top: -1.5rem !important;
   }
   .details_1 .bloc2 .bloc_host {
     display: flex;
     flex-direction: row;
+    justify-content: unset !important;
     padding-top: 2rem;
+  }
+  .details_1 .bloc2 .bloc_host .blocName .hostName {
+    font-size: 1rem !important;
+  }
+  .details_1 .bloc2 .bloc_host img {
+    width: 40% !important;
+    height: 85%;
+    margin-top: 0.7rem;
+    margin-left: auto;
   }
   .details_1 .bloc2 .rate {
     margin-left: 0px !important;
+    padding-top: 3.5rem !important;
   }
   .details_1 .bloc2 .rate .star {
     font-size: 1rem !important;

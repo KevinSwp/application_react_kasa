@@ -84,7 +84,15 @@ function Flat() {
                         {
                             flatData.host &&
                             <div className='bloc_host'>
-                                <p className='hostName'>{flatData.host.name}</p>
+                                <div className='blocName'>
+                                    {
+                                        // Divide the name into an array ['Nathalie', 'Jean']
+                                        flatData.host.name.split(' ').map((namePart, index) => (
+                                            // Display each part on a new line
+                                            <p className='hostName' key={index}>{namePart}</p>
+                                        ))
+                                    }
+                                </div>
                                 <img src={flatData.host.picture} alt={flatData.host.name} />
                             </div>
                         }
