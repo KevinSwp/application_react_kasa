@@ -14,7 +14,9 @@ function Carousel({ images }) {
     // State and setter for the current image index displayed. It is initially set to 0.
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    // Function to go to the previous image in the carousel.
+    /**
+     * Function to go to the previous image in the carousel.
+     */
     const goToPrevImage = () => {
         // Update the state. Takes the old index and calculates the new one.
         setCurrentImageIndex(oldIndex => {
@@ -29,7 +31,9 @@ function Carousel({ images }) {
         });
     };
 
-    // Function to go to the next image in the carousel.
+    /**
+     * Function to go to the next image in the carousel.
+     */
     const goToNextImage = () => {
         // Update the state with the new index.
         setCurrentImageIndex(oldIndex => {
@@ -51,9 +55,13 @@ function Carousel({ images }) {
 
     return (
         <div className='carousel'>
-            <button className='previous' onClick={goToPrevImage}><ChevronLeft /></button>
+            <button className='previous' onClick={goToPrevImage}>
+                <ChevronLeft />
+            </button>
             <img className='carousel_img' src={images[currentImageIndex]} alt="" />
-            <button className='next' onClick={goToNextImage}><ChevronRight /></button>
+            <button className='next' onClick={goToNextImage}>
+                <ChevronRight />
+            </button>
             <div className='current_img'>
                 {/* +1 to display the first index */}
                 {currentImageIndex + 1}/{images.length} 

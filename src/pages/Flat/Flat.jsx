@@ -6,8 +6,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 // Import the Banner component
 import Carousel from '../../components/Carousel/Carousel';
-import DropdownDescription from '../../components/Dropdown/DropdownDescription';
-import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
+import Dropdown from '../../components/Dropdown/Dropdown';
+// import DropdownDescription from '../../components/Dropdown/DropdownDescription';
+// import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
 import Star from '../../components/Stars/Star';
 // Import the style sheet
 import './flat.scss';
@@ -113,10 +114,19 @@ function Flat() {
                 
                 <div className='details_2'>
                     <div className='btnDescription'>
-                        <DropdownDescription flatData={flatData}/>
+                        <Dropdown title="Description">
+                                <p>{flatData.description}</p>
+                        </Dropdown>
                     </div>
+                    
                     <div className='btnEquipments'>
-                        <DropdownEquipements flatData={flatData}/>
+                        <Dropdown title="Équipements">
+                            {
+                                flatData.equipments && flatData.equipments.map((equipement, index) => (
+                                    <p key={index}>{equipement}</p>
+                                ))
+                            }
+                        </Dropdown>
                     </div>
                 </div>
             </div>

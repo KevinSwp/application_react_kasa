@@ -6,37 +6,57 @@
     .Logo_Home {
 
         img {
-            width: 100%;
+            width: 220px;
             min-width: 100px;
         }
     }
 }
 
-.navigation {
-    display: flex;
-    list-style: none;
-    padding-top: 1rem;
+.blocNav {
     width: 100%;
-
-    li {
-        padding-left: 3rem;
-    }
-
-    .default_link {
-        text-decoration: none;
-        color: #FF6060;
-        font-size: x-large;
-    }
-
-    .active_link {
-        text-decoration: underline;
+    .navigation {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: end;
+        padding-top: 1rem;
+        // width: 100%;
+    
+        li {
+            padding-left: 3rem;
+        }
+    
+        .default_link {
+            text-decoration: none;
+            color: #FF6060;
+            font-size: x-large;
+        }
+    
+        .active_link {
+            text-decoration: underline;
+        }
     }
 }
 
 @media screen and (max-width: 800px) {
+    .header {
+        margin-bottom: 1rem;
+        .Logo_Home {
+            img {
+                width: 150px;
+            }
+        }
+    }
+
     .navigation {
+        padding-top: 0rem !important;
+
+        li {
+            padding-left: 1rem !important;
+        }
+
         .default_link {
-            font-size: large;
+            font-size:medium !important;
         }
     }
 }

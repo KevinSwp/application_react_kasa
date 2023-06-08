@@ -1,7 +1,7 @@
-function Banner({ imgSrc }) {
+function Banner({ title, imgSrc }) {
     return (
         <header className="bannerDefault">
-            <h1 className="h1Default">Banniere</h1>
+            {title && <h1 className="h1Default">{title}</h1>}
             <img src={imgSrc} alt="Banniere"/>
         </header>
     );

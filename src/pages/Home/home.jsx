@@ -37,8 +37,8 @@ function Home() {
         <div>
             <div className='bannerHome'>
                 {/* Use the Banner component and pass the banner image as a prop */}
-                <Banner imgSrc={bannerHome} />
-                <p className='textBannerHome'>Chez vous, partout et ailleurs</p>
+                <Banner title="Chez vous, partout et ailleurs" imgSrc={bannerHome} />
+                <p className='textBannerHome'>Chez vous, <br className='br'></br>partout et ailleurs</p>
             </div>
             <div className="apartmentList">
                 {/* Map over the 'flatData' state to render a Link for each flat */}

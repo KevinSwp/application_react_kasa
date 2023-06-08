@@ -4,18 +4,17 @@
     .carousel {
         position: relative;
         background-color: transparent;
-        padding: 0;
         height: 400px;
-        margin-bottom: 3rem;
+        margin-top: -1.5rem;
 
         .previous{
             position: absolute;
             border: none;
             background-color: transparent;
             fill: white;
-            font-size: 7rem;
-            top: 8.5rem;
-            left: 2rem;
+            font-size: 6rem;
+            top: 9rem;
+            left: 1.5rem;
         }
 
         .next {
@@ -23,23 +22,23 @@
             border: none;
             background-color: transparent;
             fill: white;
-            font-size: 7rem;
-            top: 8.5rem;
-            right: 2rem;
+            font-size: 6rem;
+            top: 9rem;
+            right: 1.5rem;
         }
 
         .carousel_img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 1rem;
+            border-radius: 1.5rem;
         }
 
         .current_img {
             position: absolute;
             color: white;
             top: 22rem;
-            left: 50%;
+            left: 48%;
             font-size: 1.2rem;
         }
     }
@@ -66,13 +65,14 @@
             }
             .bloc_title_location{
                 h1 {
-                    margin-top: 0;
+                    font-weight: lighter;
                     padding-right: 2rem;
+                    font-size: 2rem;
+                    margin-bottom: -0.5rem;
                 }
     
                 p {
                     font-size: 1.3rem;
-                    padding-bottom: 0.8rem;
                 }
             }
         }
@@ -81,7 +81,7 @@
             .bloc_host {
                 display: flex;
                 justify-content: space-between;
-                margin-top: -1rem;
+                margin-top: 1rem;
     
                 .blocName {
                     padding-top: 1rem;
@@ -96,7 +96,7 @@
     
                 img {
                     border-radius: 5rem;
-                    width: 60%;
+                    width: 50%;
                 }
 
             }
@@ -122,28 +122,29 @@
         .btnDescription {
             width: 100%;
             margin-right: 5rem;
+
+            p {
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+            }
         }
 
         .btnEquipments{
             width: 100%;
+
+            p {
+                font-size: 1.1rem;
+                line-height: 0.5rem;
+            }
         }
 
-        .dropdownContent {
+        .blocDropdownContent {
             background-color: #F6F6F6;
             border-bottom-left-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
 
-            .description.active {
-                padding: 0.5rem 2rem 0.5rem 1rem;
-            }
-
-            .equipments.active{
-                padding: 0.5rem 2rem 0.5rem 1rem;
-
-                ul {
-                    list-style: none;
-                    padding: 0;
-                }
+            .dropdownContent.active {
+                padding: 0.5rem 2rem 0.5rem 1.5rem;
             }
             
             .button {
@@ -153,6 +154,11 @@
                 border-radius: 0.5rem;
                 padding: 0.8rem 1rem 0.8rem 1rem;
                 cursor: pointer;
+                width: 100%;
+                color: white;
+                align-items: center;
+                font-size: 1.3rem;
+                border: 0;
 
                 button {
                     border: none;
@@ -187,8 +193,35 @@
 }
 
 @media screen and (max-width: 800px) {
+    .carousel {
+        height: 300px !important;
+        margin-top: 0rem !important;
+
+        .carousel_img {
+            border-radius: 1rem !important;
+        }
+
+        .current_img {
+            top: 16.5rem !important;
+            font-size: 1rem !important;
+        }
+    }
+
     .details_1 {
         flex-direction: column;
+
+        .bloc1 {
+            .bloc_title_location {
+                h1 {
+                    font-size: 1.6rem !important;
+                    padding-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 1rem !important;
+                }
+            }
+        }
 
         .bloc2 {
             display: flex;
@@ -197,28 +230,26 @@
             margin-top: -1.5rem !important;
 
             .bloc_host {
-                display: flex;
-                flex-direction: row;
-                justify-content: unset !important;
-                padding-top: 2rem;
+                margin-top: 0 !important;
 
                 .blocName {
+                    padding-right: 1rem;
+
                     .hostName {
                         font-size: 1rem !important;
                     }
                 }
     
                 img {
-                    width: 40% !important;
-                    height: 85%;
-                    margin-top: 0.7rem;
-                    margin-left: auto;
+                    width: 60px !important;
+                    height: 60px;
+                    margin-top: 1rem;
                 }
             }
 
             .rate {
                 margin-left: 0px !important;
-                padding-top: 3.5rem !important;
+                width: 100%;
 
                 .star {
                     font-size: 1rem !important;
@@ -228,21 +259,42 @@
     }
 
     .previous{
-        font-size: 3rem !important;
-        top: 11rem !important;
+        font-size: 2rem !important;
+        top: 8.5rem !important;
+        left: 0.5rem !important;
     }
 
     .next {
-        font-size: 3rem !important;
-        top: 11rem !important;
+        font-size: 2rem !important;
+        top: 8.5rem !important;
+        right:  0.5rem !important;
     }
 
     .details_2 {
         flex-direction: column;
+        padding-top: 0rem !important;
+
+        .button {
+            font-size: 1.1rem !important;
+            padding: 0.5rem 0.8rem 0.5rem 0.8rem !important;
+        }
 
         .btnDescription {
             margin-bottom: 2rem;
             margin-top: 1rem;
+
+            p {
+                font-size: 1rem !important;
+                line-height: 1.3rem;
+            }
+        }
+
+        .btnEquipments {
+
+            p {
+                font-size: 1rem !important;
+                line-height: 1.3rem;
+            }
         }
     }
 }

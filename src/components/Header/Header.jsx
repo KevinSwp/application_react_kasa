@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
+
 import logo from "./LOGO.svg";
+
 import './header.scss'; 
 
 function Header () {
@@ -7,14 +9,14 @@ function Header () {
         <div className="header">
             <NavLink to="/">
                 <div className="Logo_Home">
-                    <img src={logo} alt="Page d'accueil" />
+                    <img src={logo} alt="Lien vers la page d'accueil" />
                 </div>
             </NavLink>
             
-            <div>
+            <div className="blocNav">
                 <ul className="navigation">
                     <li>
-                        <NavLink to="/"className={({ isActive }) => isActive ? 'default_link active_link' : 'default_link'}>
+                        <NavLink to="/" className={({ isActive }) => isActive ? 'default_link active_link' : 'default_link'}>
                             Accueil
                         </NavLink>
                     </li>

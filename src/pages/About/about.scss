@@ -2,7 +2,7 @@
     .bannerDefault {
         background-color: transparent;
         padding: 0;
-        height: 200px;
+        height: 250px;
 
         .h1Default {
             display: none;
@@ -24,40 +24,24 @@
     margin-bottom: -5rem;
 
     .btnReliability {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .btnRespect{
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .btnService{
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
-    .btnSecurity{
-        margin: auto;
-    }
-
-    .dropdownContent {
+    .blocDropdownContent {
         background-color: #F6F6F6;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
 
-        .reliability.active {
-            padding: 0.5rem 2rem 0.5rem 1rem;
-        }
-
-        .respect.active{
-            padding: 0.5rem 2rem 0.5rem 1rem;
-        }
-
-        .service.active{
-            padding: 0.5rem 2rem 0.5rem 1rem;
-        }
-
-        .security.active{
-            padding: 0.5rem 2rem 0.5rem 1rem;
+        .dropdownContent.active {
+            padding: 0.5rem 2rem 0.5rem 1.5rem;
         }
         
         .button {
@@ -66,7 +50,12 @@
             background-color: #FF6060;
             border-radius: 0.5rem;
             padding: 0.8rem 1rem 0.8rem 1rem;
+            border: 0;
             cursor: pointer;
+            width: 100%;
+            color: white;
+            align-items: center;
+            font-size: 1.3rem;
 
             button {
                 border: none;
@@ -89,13 +78,24 @@
     .dropdowns {
         padding-left: 0 !important;
         padding-right: 0 !important;
-        font-size: 1rem;
+        font-size: 1rem !important;
+        line-height: 1.3rem;
+
+        .btnReliability {
+            margin-bottom: 1.5rem;
+        }
+
+        .btnRespect {
+            margin-bottom: 1.5rem;
+        }
+
+        .btnService {
+            margin-bottom: 1.5rem;
+        }
 
         .button {
-
-            button {
-                font-size: 1rem !important;
-            }
+            font-size: 1.1rem !important;
+            padding: 0.5rem 0.8rem 0.5rem 0.8rem !important;
         }
     }
 }
