@@ -3,27 +3,30 @@
  */
 // Import necessary hooks and functionality from 'react' and 'react-router-dom'
 import React, { useState } from "react";
-// Import components
+// Import Chevron components
 import ChevronUp from "../Chevrons/ChevronUp";
 import ChevronDown from "../Chevrons/ChevronDown";
 
-// A functional component 'DropdownDescription' is being declared, which receives a prop 'flatData'.
+/**
+ * Dropdown function
+ */
 function Dropdown ({ title, children }) {
-    // A state called 'isDropdownDescriptionOpen' is being declared with an initial value of 'false'.
-    // 'setisDropdownDescriptionOpen' is the function used to update the state.
+    // Initially set to false, dropdown is closed by default.
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    // The component returns JSX
+    // The component returns a section of JSX
     return (
         <div className="blocDropdownContent">
-            {/* The button has an onClick event handler which toggles the 'isDropdownDescriptionOpen' state. */}
+            {/* When the button is clicked, the 'isDropdownOpen' state is toggled between true and false. */}
             <button type="button" className="button" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 <span>{title}</span>
+                {/* If 'isDropdownOpen' is true, then the 'ChevronUp' component is displayed, otherwise, 'ChevronDown' is displayed. */}
                 {isDropdownOpen ? <ChevronUp /> : <ChevronDown />}
             </button>
 
-            {/* If 'isDropdownDescriptionOpen' is true, it will render a paragraph with the text from 'flatData.description'. */}
+            {/* 'active' added when 'isDropdownOpen' is true. */}
             <div className={`dropdownContent ${isDropdownOpen ? 'active' : ''}`}>
+                {/* This is a conditional rendering that only renders the dropdown content when 'isDropdownOpen' is true. */}
                 {isDropdownOpen && <div className="dropdownContent">        
                     {children}
                 </div>}
@@ -32,5 +35,5 @@ function Dropdown ({ title, children }) {
     )
 }
 
-// Export the DropdownDescription component as the default export
+// Export the Dropdown component as the default export
 export default Dropdown;

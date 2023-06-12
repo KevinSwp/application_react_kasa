@@ -23,10 +23,10 @@ function Flat() {
     // Hook to get 'id' from the URL parameters
     const { id } = useParams();
 
-    // Hook for navigation, can be used to programmatically navigate
-    const navigate = useNavigate();
+    // Hook for navigation, can be used to programmatically goTo404
+    const goTo404 = useNavigate();
 
-    // Effect hook runs when 'id' or 'navigate' changes.
+    // Effect hook runs when 'id' or 'goTo404' changes.
     useEffect(() => {
 
         // Fetch data from local JSON file
@@ -35,26 +35,26 @@ function Flat() {
             .then(data => {
 
                 // Search for a specific flat in data using the id from the URL parameters
-                const foundFlat = data.find(item => item.id === id);
+                const foundFlat = data.find(flat => flat.id === id);
 
                 // If no flat was found, navigate to 404 page
                 if (!foundFlat) {
-                    navigate('/404');
+                    goTo404('/404');
                 } else {
                     // Else update the state with the found flat's data
                     setFlatData(foundFlat);
                 }
             })
-            // If an error occurs during fetching, log the error and navigate to 404 page
+            // If an error occurs during fetching, log the error and goTo404 to 404 page
             .catch(error => {
                 console.error(error);
-                navigate('/404');
+                goTo404('/404');
             })
 
-    // Dependency array for the effect hook. If 'id' or 'navigate' changes, the effect is re-run.
-    }, [id, navigate]);
+    // Dependency array for the effect hook. If 'id' or 'goTo404' changes, the effect is re-run.
+    }, [id, goTo404]);
 
-    // If 'flatData' is still null (i.e., data has not been fetched yet), don't render anything
+    // If 'flatData' is still null (data has not been fetched yet), don't render anything
     if (!flatData) {
         return null;
     }
@@ -73,7 +73,7 @@ function Flat() {
                         <div className='tags'>
                             {/* Checks if flatData has 'tags' property and then maps over each tag */}
                             {
-                                flatData.tags && flatData.tags.map((tag, index) => (
+                                flatData.tags.map((tag, index) => (
                                     // For each tag, a paragraph with a 'tag' class is created, using the index as a key
                                     <p className='tag' key={index}>{tag}</p>
                                 ))
@@ -87,7 +87,7 @@ function Flat() {
                             <div className='bloc_host'>
                                 <div className='blocName'>
                                     {
-                                        // Divide the name into an array ['Nathalie', 'Jean']
+                                        // Divide the name into an array ['Name', 'Name']
                                         flatData.host.name.split(' ').map((namePart, index) => (
                                             // Display each part on a new line
                                             <p className='hostName' key={index}>{namePart}</p>
