@@ -7,8 +7,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 // Import the Banner component
 import Carousel from '../../components/Carousel/Carousel';
 import Dropdown from '../../components/Dropdown/Dropdown';
-// import DropdownDescription from '../../components/Dropdown/DropdownDescription';
-// import DropdownEquipements from '../../components/Dropdown/DropdownEquipements';
 import Star from '../../components/Stars/Star';
 // Import the style sheet
 import './flat.scss';
