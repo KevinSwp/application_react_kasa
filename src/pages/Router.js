@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Home from "./Home/Home";
 import About from "./About/About";
-import Flat from "./Flat/Flat";
+import Flat from "./FlatPage/FlatPage";
 import Error404 from "./Error404/Error404";
 
 import './style.scss'

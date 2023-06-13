@@ -5,11 +5,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 // Import the Banner component
+import Tag from '../../components/Tags/tags';
 import Carousel from '../../components/Carousel/Carousel';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import Star from '../../components/Stars/Star';
 // Import the style sheet
-import './flat.scss';
+import './flatPage.scss';
 
 /**
  * Define the Flat functional component 
@@ -72,8 +73,8 @@ function Flat() {
                             {/* Checks if flatData has 'tags' property and then maps over each tag */}
                             {
                                 flatData.tags.map((tag, index) => (
-                                    // For each tag, a paragraph with a 'tag' class is created, using the index as a key
-                                    <p className='tag' key={index}>{tag}</p>
+                                    // For each tag, a Tag component is rendered
+                                    <Tag content={tag} key={index} />
                                 ))
                             }
                         </div>

@@ -1,13 +1,11 @@
 /**
  * Import
  */
-// Import the Link component from 'react-router-dom' for navigation
-import { Link } from 'react-router-dom';
 // Import necessary hooks from 'react'
 import React, { useState, useEffect } from 'react';
-// Import the Banner component
+// Import components
+import Flat from '../../components/Thumb/FlatComponent';
 import Banner from '../../components/Banner/Banner';
-// Import the banner image
 import bannerHome from "./bannerHome.png";
 // Import the style sheet
 import './home.scss';
@@ -41,13 +39,9 @@ function Home() {
                 <p className='textBannerHome'>Chez vous, <br className='br'></br>partout et ailleurs</p>
             </div>
             <div className="apartmentList">
-                {/* Map over the 'flatData' state to render a Link for each flat */}
+                {/* Map over the 'flatData' state to render a Flat component for each flat */}
                 {flatData.map((flat) => (
-                    <Link to={`/flats/${flat.id}`} key={flat.id} className='flat'>
-                        {/* Display the cover image and the title of each flat */}
-                        <img src={flat.cover} alt={flat.title}/>
-                        <h1>{flat.title}</h1>
-                    </Link>
+                    <Flat id={flat.id} cover={flat.cover} title={flat.title} />
                 ))}
             </div>
         </div>
